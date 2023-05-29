@@ -38,6 +38,7 @@ describe('Basic user flow for Website', () => {
     // TODO - Step 1 - Complete
     // Right now this function is only checking the first <product-item> it found, make it so that
     // it checks every <product-item> it found
+<<<<<<< HEAD
     const allProdItems = await page.$$('product-item');
     for (let i = 0; i < allProdItems.length; i++) {
       console.log(`Checking product item ${i + 1}/${allProdItems.length}`);
@@ -47,6 +48,15 @@ describe('Basic user flow for Website', () => {
       if (plainValue.price.length == 0) { allArePopulated = false; }
       if (plainValue.image.length == 0) { allArePopulated = false; }
     }
+=======
+    const prodItems = await page.$$('product-item');
+    console.log(`Checking product item 1/${prodItems.length}`);
+    data = await prodItems[0].getProperty('data');
+    plainValue = await data.jsonValue();
+    if (plainValue.title.length == 0) { allArePopulated = false; }
+    if (plainValue.price.length == 0) { allArePopulated = false; }
+    if (plainValue.image.length == 0) { allArePopulated = false; }
+>>>>>>> aee1c5d64cb7997479dec74f63330a0cad078d2c
     expect(allArePopulated).toBe(true);
 
   }, 10000);
