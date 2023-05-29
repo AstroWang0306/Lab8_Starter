@@ -38,6 +38,14 @@ describe('Basic user flow for Website', () => {
     // TODO - Step 1
     // Right now this function is only checking the first <product-item> it found, make it so that
     // it checks every <product-item> it found
+    const prodItems = await page.$$('product-item');
+    console.log(`Checking product item 1/${prodItems.length}`);
+    data = await prodItems[0].getProperty('data');
+    plainValue = await data.jsonValue();
+    if (plainValue.title.length == 0) { allArePopulated = false; }
+    if (plainValue.price.length == 0) { allArePopulated = false; }
+    if (plainValue.image.length == 0) { allArePopulated = false; }
+    expect(allArePopulated).toBe(true);
 
   }, 10000);
 
