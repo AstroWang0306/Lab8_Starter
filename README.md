@@ -1,5 +1,12 @@
 # Lab 8 - Starter
 
+Screenshot of the result:
+
+<img width="566" alt="Screen Shot 2023-05-29 at 12 32 38 AM" src="https://github.com/AstroWang0306/Lab8_Starter/assets/97696773/80565e87-bd34-4641-9ef4-1f0f32ab3fb9">
+
+<img width="609" alt="Screen Shot 2023-05-29 at 12 32 17 AM" src="https://github.com/AstroWang0306/Lab8_Starter/assets/97696773/df97f2c5-017d-4b2c-88f7-570d208c1a21">
+
+
 1. Where would you fit your automated tests in your Recipe project development pipeline? Select one of the following and explain why.
 
 Within a Github action that runs whenever code is pushed 
